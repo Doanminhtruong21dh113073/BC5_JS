@@ -4,15 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- Bootstrap CSS -->
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>Document</title>
 </head>
-<body>
-    <!DOCTYPE html>
-<html>
-<head>
-  <title>Tính điểm thi đại học</title>
-  <script src="script.js"></script>
-</head>
+
 <body>
   <h1>Tính điểm thi đại học</h1>
 
@@ -45,8 +42,69 @@
   <button onclick="calculateScore()">Tính điểm</button>
 
   <p id="ketQua"></p>
-</body>
-</html>
+  
+  <hr>
+
+
+  <form>
+    <label for="name">Tên:</label>
+    <input type="text" id="name" name="name"><br><br>
+    <label for="kw">Số Kw:</label>
+    <input type="number" id="kw" name="kw"><br><br>
+    <button onclick="tinhTienDien()">Tính tiền điện</button>
+  </form>
+  
+
+  <p id="result"></p>
+
+  <hr>
+
+  <form>
+		<label for="name">Họ tên:</label>
+		<input type="text" id="name"><br><br>
+
+		<label for="income">Tổng thu nhập năm:</label>
+		<input type="number" id="income"><br><br>
+
+		<label for="dependents">Số người phụ thuộc:</label>
+		<input type="number" id="dependents"><br><br>
+
+		<button type="button" onclick="calculateTax()">Tính thuế</button><br><br>
+
+		<label for="result">Thuế thu nhập cá nhân phải trả:</label>
+		<input type="number" id="result" readonly>
+	</form>
+  <hr>
+
+  <form>
+    <label for="customer-type">Loại khách hàng:</label>
+    <select id="customer-type" onchange="toggleConnectionsInput()">
+      <option value="individual">Nhà dân</option>
+      <option value="business">Doanh nghiệp</option>
+      
+    </select>
+    <br>
+    <label for="connections">Số kết nối (đối với Doanh nghiệp):</label>
+    <input type="number" id="connections" disabled>
+    <br>
+    <label for="channels">Số kênh cao cấp:</label>
+    <input type="number" id="channels">
+    <br>
+    <button type="button" onclick="calculateBill()">Tính hóa đơn</button>
+  </form>
+  
+  <div id="bill"></div>
+
+
+
+
+
+
+
+
+
+
+
 
 
     <script src="./main.js"></script>
