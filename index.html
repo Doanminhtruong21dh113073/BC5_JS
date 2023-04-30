@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html>
+<head>
+  <title>Tính điểm thi đại học</title>
+  <script src="script.js"></script>
+</head>
+<body>
+  <h1>Tính điểm thi đại học</h1>
+
+  <label for="diemChuan">Điểm chuẩn:</label>
+  <input type="number" id="diemChuan" name="diemChuan" step="0.01"><br>
+
+  <label for="khuVuc">Khu vực:</label>
+  <select id="khuVuc" name="khuVuc">
+    <option value="A">KV1</option>
+    <option value="B">KV2</option>
+    <option value="C">KV3</option>
+  </select><br>
+
+  <label for="doiTuong">Đối tượng:</label>
+  <select id="doiTuong" name="doiTuong">
+    <option value="1">ĐT1</option>
+    <option value="2">ĐT2</option>
+    <option value="3">ĐT3</option>
+  </select><br>
+
+  <label for="diemA">Điểm môn A:</label>
+  <input type="number" id="diemA" name="diemA" step="0.01"><br>
+
+  <label for="diemB">Điểm môn B:</label>
+  <input type="number" id="diemB" name="diemB" step="0.01"><br>
+
+  <label for="diemC">Điểm môn C:</label>
+  <input type="number" id="diemC" name="diemC" step="0.01"><br>
+
+  <button onclick="calculateScore()">Tính điểm</button>
+
+  <p id="ketQua"></p>
+</body>
+</html>
+
+
+    <script src="./main.js"></script>
+    </body>
+</html>
